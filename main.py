@@ -1,12 +1,15 @@
 # Create a dictionary called `person`, it has three properties, `name` which is a string, `age` which is an integer, `hobbies` which is a list of strings.
-
-
+person = {
+        "name": "nadia",
+        "age": 1,
+        "hobbies": ["eating", "playing football"],
+}
 # Create a function called `change_age` which takes the `person` dictionary and a `number` as arguments, this function changes the age in the dictionary to the `number`. The return value of this function is the updated dictionary.
 
 
 def change_age(person, number):
-    ...
-
+    person["age"] = number
+    return person
 
 print(change_age(person, 21))
 
@@ -15,8 +18,9 @@ print(change_age(person, 21))
 
 
 def add_hobby(person, hobby):
-    ...
 
+    person["hobbies"].append(hobby)
+    return person
 
 print(add_hobby(person, "Table Tennis"))
 
